@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="con">
+        <nav>
+            <h1>University Name</h1>
+            <a href="{{url_for('admin_logout')}}"> Logout</a>
+        </nav>
+        <div class="heading">
+            <h2>Enter The Details of the Student</h2>
+        </div>
+        <div class="contain">
+            <form method="POST" action="/add" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Student Name...">
+                <br>
+                <label for="G-name">Gaurdians Name:</label>
+                <input type="text" id="G-name" name="G-name" placeholder="Enter Guardian's Name...">
+                <br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" placeholder="DD/MM/YYYY">
+                <br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter Present Address...">
+                <br>
+                <label for="mobile">Moblie Number:</label>
+                <input type="text" id="mobile" name="mobile" placeholder="Enter Mobile Number...">
+                <br>
+                
+                <label for="inter">Intermediate Percentage:</label>
+                <input type="text" id="inter" name="inter" placeholder="Enter InterMediate Percentage...">
+                <br>
+                <label for="10th">Secondary Percentage:</label>
+                <input type="text" id="10th" name="10th" placeholder="Enter 10th Percentage...">
+                <br>
+                <label for="img_file">Image:</label>
+                <input type="file" id="img_file" name="img_file">
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="con">
+        <nav>
+            <h1>University Name</h1>
+
+        </nav>
+        <div class="heading">
+            <h2>Student Login Page</h2>
+        </div>
+        <div class="container">
+            <form action="/student_page" method="POST">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="pass" placeholder="Password">
+                <button type="submit">Login</button>
+                <a href="{{url_for('change_pass')}}">Change password</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="con">
+        <nav>
+            <h1>University Name</h1>
+            <a href="{{url_for('student_logout')}}"> Logout</a>
+        </nav>
+        <div class="heading">
+            <h2>Student Details</h2>
+        </div>
+        <div class="contain">
+            <img src="{{ image_url }}" alt="image">
+            <h3>Name:    {{ name }}</h3>
+            <h3>Roll Number:    {{ roll }}</h3>
+            <h3>Date of Birth:    {{ dob }}</h3>
+            <h3>Gaurdian Name:    {{ gname }}</h3>
+            <h3>address:    {{ address }}</h3>
+            <h3>Mobile Number:    {{ mobile }}</h3>
+            <h3>10th Percentage:    {{ tenth }}</h3>
+            <h3>Intermediate Percentage:    {{ inter }}</h3>
+
+        </div>
+    </div>
+    
+</body>
+</html>
